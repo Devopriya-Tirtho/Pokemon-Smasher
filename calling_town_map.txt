@@ -1,0 +1,28 @@
+int x=30, y=30;
+boolean townMap = false, screen=true;
+void iDraw()
+{
+	//place your drawing codes here	
+	iClear();
+
+	if (townMap)
+	{
+		town_map();
+	}
+	if (screen)
+	{
+		iSetColor(88, 88, 88);
+		iPoint(x, y, 3);
+
+		iSetColor(255, 0, 0);
+		iRectangle(300, 300, 120, 80);
+	}
+
+	if (x > 300 && x < 420 && y>300 && y < 380)
+	{
+		//iClear();
+		townMap = true;
+		screen = false;
+	}
+
+}

@@ -1,0 +1,92 @@
+void pokemon_list() {
+	/*Bulbasaur::ID 0*/
+	strcpy(characters[0].pokemon_name, "Bulbasaur");
+	characters[0].type_identifier = 1;
+	characters[0].move[0] = moves[3]; //razor leaf
+	characters[0].move[1] = moves[9]; //tackle
+	characters[0].move[2] = moves[4]; //seed bomb
+	characters[0].move[3] = moves[5]; //solar beam
+	characters[0].health = 200;
+
+	/*Charmander:: ID 1*/
+	strcpy(characters[1].pokemon_name, "Charmander");
+	characters[1].type_identifier = 2;
+	characters[1].move[0] = moves[0]; //ember
+	characters[1].move[1] = moves[10]; //quick attack
+	characters[1].move[2] = moves[1]; //flamethrower
+	characters[1].move[3] = moves[2]; //fire blast
+	characters[1].health = 188;
+
+	/*Squirtel:: ID 2*/
+	strcpy(characters[2].pokemon_name, "Squirtel");
+	characters[2].type_identifier = 3;
+	characters[2].move[0] = moves[6]; //water gun
+	characters[2].move[1] = moves[9]; //tackle
+	characters[2].move[2] = moves[7]; //water pulse
+	characters[2].move[3] = moves[8]; //hydro pump
+	characters[2].health = 198;
+
+	/*Pikachu:: ID 3*/
+	strcpy(characters[3].pokemon_name, "Pikachu");
+	characters[3].type_identifier = 6;
+	characters[3].move[0] = moves[11]; //thundershock
+	characters[3].move[1] = moves[9]; //tackle
+	characters[3].move[2] = moves[10]; //quick attack
+	characters[3].move[3] = moves[12]; //thunderbolt
+	characters[3].health = 180;
+
+	/*Pidgey:: ID 4*/
+	strcpy(characters[4].pokemon_name, "Pidgey");
+	characters[4].type_identifier = 4;
+	characters[4].move[0] = moves[9]; //tackle
+	characters[4].move[1] = moves[15]; //gust
+	characters[4].move[2] = moves[16]; //wing attack
+	characters[4].move[3] = moves[10]; //quick attack
+	characters[4].health = 190;
+
+	/*Mankey:: ID 5*/
+	strcpy(characters[5].pokemon_name, "Mankey");
+	characters[5].type_identifier = 5;
+	characters[5].move[0] = moves[9]; //tackle
+	characters[5].move[1] = moves[13]; //carate chop
+	characters[5].move[2] = moves[14]; //cross chop
+	characters[5].move[3] = moves[10]; //quick attack
+	characters[5].health = 190;
+
+	/*Ponyta:: ID 6*/
+	strcpy(characters[6].pokemon_name, "Ponyta");
+	characters[6].type_identifier = 2;
+	characters[6].move[0] = moves[9]; //tackle
+	characters[6].move[1] = moves[10]; //quick attack
+	characters[6].move[2] = moves[0]; //ember
+	characters[6].move[3] = moves[1]; //flamethrower
+	characters[6].health = 210;
+
+	/*Porygon:: ID 7*/
+	strcpy(characters[7].pokemon_name, "Porygon");
+	characters[7].type_identifier = 7;
+	characters[7].move[0] = moves[10]; //quick attack
+	characters[7].move[1] = moves[9]; //tackle
+	characters[7].move[2] = moves[12]; //thunderbolt
+	characters[7].move[3] = moves[6]; //water gun
+	characters[7].health = 240; 
+
+	/*Exeggutor:: ID 8*/
+	strcpy(characters[8].pokemon_name, "Exeggutor");
+	characters[8].type_identifier = 1;
+	characters[8].move[0] = moves[10]; //quick attack
+	characters[8].move[1] = moves[4]; //seed bomb
+	characters[8].move[2] = moves[5]; //solar beam
+	characters[8].move[3] = moves[3]; //razor leaf
+	characters[8].health = 300;
+
+	/*Polywrath:: ID 9*/
+	strcpy(characters[9].pokemon_name, "Bulbasaur");
+	characters[9].type_identifier = 3;
+	characters[9].move[0] = moves[7]; //water pulse
+	characters[9].move[1] = moves[8]; //hydro pump
+	characters[9].move[2] = moves[13]; //carate chop
+	characters[9].move[3] = moves[14]; //cross chop
+	characters[9].health = 290;
+
+}

@@ -1,0 +1,24 @@
+# include "iGraphics.h"
+#include <time.h>
+double x, y,t;
+void random() 
+{
+	x = rand() % 300;
+	y = rand() % 300;
+}
+void iDraw()
+{
+	//place your drawing codes here	
+	iClear();
+
+	iSetColor(63, 178, 204);
+	iRectangle(x, y, 150, 150);
+	
+}
+int main()
+{
+	srand(time(NULL));
+	t = iSetTimer(1000, random);
+	iInitialize(960, 540, "demooo");
+	return 0;
+}

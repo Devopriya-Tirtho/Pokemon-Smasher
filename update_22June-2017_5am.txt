@@ -1,0 +1,323 @@
+/*
+author: S. M. Shahriar Nirjon
+last modified: August 8, 2008
+*/
+
+# include "iGraphics.h"
+#include<string.h>
+#include <math.h>
+#include <time.h>
+/*
+function iDraw() is called again and again by the system.
+*/
+struct attack {
+	char attk_name[30];
+	double power;
+	double type_identifier;
+}moves[20];
+struct pokemon {
+	char pokemon_name[30];
+	struct attack move[4];
+	double id;
+	double level;
+	double health;
+	double type_identifier;
+	double getHealth()
+	{
+		return health + (health*(level / 10));
+	}
+}characters[10];
+void attack_list() {
+	/*Ember*/
+	strcpy(moves[0].attk_name, "Ember");
+	moves[0].power = 40;
+	moves[0].type_identifier = 2;
+	
+	/*Flamethrower*/
+	strcpy(moves[1].attk_name, "Flamethrower");
+	moves[1].power = 80;
+	moves[1].type_identifier = 2;
+	
+	/*Fire Blast*/
+	strcpy(moves[2].attk_name, "Fire Blast");
+	moves[2].power = 110;
+	moves[2].type_identifier = 2;
+	
+	/*Razor Leaf*/
+	strcpy(moves[3].attk_name, "Razor Leaf");
+	moves[3].power = 40;
+	moves[3].type_identifier = 1;
+	
+	/*Seed Bomb*/
+	strcpy(moves[4].attk_name, "Seed Bomb");
+	moves[4].power = 80;
+	moves[4].type_identifier = 1;
+	
+	/*Solar Beam*/
+	strcpy(moves[5].attk_name, "Solar Beam");
+	moves[5].power = 110;
+	moves[5].type_identifier = 1;
+	
+	/*Water Gun*/
+	strcpy(moves[6].attk_name, "Water Gun");
+	moves[6].power = 40;
+	moves[6].type_identifier = 3;
+	
+	/*Water Pulse*/
+	strcpy(moves[7].attk_name, "Water Pulse");
+	moves[7].power = 80;
+	moves[7].type_identifier = 3;
+	
+	/*Hydro Pump*/
+	strcpy(moves[8].attk_name, "Hydro Pump");
+	moves[8].power = 110;
+	moves[8].type_identifier = 3;
+	
+	/*Tackle*/
+	strcpy(moves[9].attk_name, "Tackle");
+	moves[9].power = 40;
+	moves[3].type_identifier = 7;
+	
+	/*Quick Attack*/
+	strcpy(moves[10].attk_name, "Quick Attack");
+	moves[10].power = 60;
+	moves[10].type_identifier = 7;
+
+	/*Thundershock*/
+	strcpy(moves[11].attk_name, "Thundershock");
+	moves[11].power = 50;
+	moves[11].type_identifier = 6;
+	
+	/*Thunderbolt*/
+	strcpy(moves[12].attk_name, "Thunderbolt");
+	moves[12].power = 80;
+	moves[12].type_identifier = 6;
+
+	/*Carate Chop*/
+	strcpy(moves[13].attk_name, "Carate Chop");
+	moves[13].power = 50;
+	moves[13].type_identifier = 5;
+
+	/*Cross Chop*/
+	strcpy(moves[14].attk_name, "Cross Chop");
+	moves[14].power = 80;
+	moves[14].type_identifier = 5;
+
+	/*Gust*/
+	strcpy(moves[15].attk_name, "Gust");
+	moves[15].power = 40;
+	moves[15].type_identifier = 4;
+
+	/*Wing Attack*/
+	strcpy(moves[16].attk_name, "Wing Attack");
+	moves[16].power = 70;
+	moves[16].type_identifier = 4;
+}
+/*double battle_health(struct pokemon pkmn, struct attack atk) {
+	
+}*/
+double type_advantage(struct pokemon pkmn_type, struct attack pkmn_atk)
+{
+	//double type_advantage;
+	int atk_type = pkmn_atk.type_identifier;
+	if (pkmn_type.type_identifier == 1)
+	{
+		switch (atk_type)
+		{
+		case 1:
+			return 0.5;
+		case 2:
+			return 2;
+		case 3:
+			return 0.5;
+		default:
+			return 1;
+		}
+
+	}
+	if (pkmn_type.type_identifier == 2)
+	{
+		switch (atk_type)
+		{
+		case 2:
+			return 0.5;
+		case 1:
+			return 0.5;
+		case 3:
+			return 2;
+		default:
+			return 1;
+		}
+
+	}
+	if (pkmn_type.type_identifier == 3)
+	{
+		switch (atk_type)
+		{
+		case 1:
+			return 2;
+		case 3:
+			return 0.5;
+		case 2:
+			return .5;
+		default:
+			return 1;
+		}
+
+	}
+	if (pkmn_type.type_identifier == 4)
+	{
+		switch (atk_type)
+		{
+		case 6:
+			return 2;
+		case 5:
+			return 0.5;
+		case 4:
+			return .5;
+		default:
+			return 1;
+		}
+
+	}
+	if (pkmn_type.type_identifier == 5)
+	{
+		switch (atk_type)
+		{
+		case 4:
+			return 2;
+		case 7:
+			return .5;
+		default:
+			return 1;
+		}
+
+	}
+	if (pkmn_type.type_identifier == 6)
+	{
+		switch (atk_type)
+		{
+		case 7:
+			return 2;
+		case 3:
+			return 0.5;
+		case 1:
+			return .5;
+		default:
+			return 1;
+		}
+
+	}
+	if (pkmn_type.type_identifier == 7)
+	{
+		switch (atk_type)
+		{
+		case 5:
+			return 2;
+		default:
+			return 1;
+		}
+
+	}
+}
+
+void pokemon_list() {
+	strcpy(characters[0].pokemon_name, "Bulbasaur");
+}
+					//type identifier of grass=1
+					//type identifier of fire=2
+					//type identifier of water=3
+					//type idnetifier of flying=4
+					//type identifier of fight=5
+					//type identifier of electric=6
+					//type identifier of normal=7 
+void iDraw()
+{
+	//place your drawing codes here	
+	iClear();
+
+	iSetColor(0, 168, 243);
+	
+}
+
+/*
+function iMouseMove() is called when the user presses and drags the mouse.
+(mx, my) is the position where the mouse pointer is.
+*/
+void iMouseMove(int mx, int my)
+{
+	//place your codes here
+}
+
+/*
+function iMouse() is called when the user presses/releases the mouse.
+(mx, my) is the position where the mouse pointer is.
+*/
+void iMouse(int button, int state, int mx, int my)
+{
+	if (button == GLUT_LEFT_BUTTON && state == GLUT_DOWN)
+	{
+		//place your codes here	
+		//printf("%lf", slope);
+		
+	}
+	if (button == GLUT_RIGHT_BUTTON && state == GLUT_DOWN)
+	{
+		//place your codes here	
+		
+	}
+}
+/*iPassiveMouseMove is called to detect and use
+the mouse point without pressing any button */
+
+void iPassiveMouseMove(int mx, int my)
+{
+	//place your code here
+
+	if (mx == 2) {}        /*Something to do with mx*/
+	else if (my == 2) {}   /*Something to do with my*/
+
+}
+
+/*
+function iKeyboard() is called whenever the user hits a key in keyboard.
+key- holds the ASCII value of the key pressed.
+*/
+
+void iKeyboard(unsigned char key)
+{
+	if (key == 'p')
+	{
+		//do something with 'q'
+	}
+
+	//place your codes for other keys here
+}
+
+/*
+function iSpecialKeyboard() is called whenver user hits special keys like-
+function keys, home, end, pg up, pg down, arraows etc. you have to use
+appropriate constants to detect them. A list is:
+GLUT_KEY_F1, GLUT_KEY_F2, GLUT_KEY_F3, GLUT_KEY_F4, GLUT_KEY_F5, GLUT_KEY_F6,
+GLUT_KEY_F7, GLUT_KEY_F8, GLUT_KEY_F9, GLUT_KEY_F10, GLUT_KEY_F11, GLUT_KEY_F12,
+GLUT_KEY_LEFT, GLUT_KEY_UP, GLUT_KEY_RIGHT, GLUT_KEY_DOWN, GLUT_KEY_PAGE UP,
+GLUT_KEY_PAGE DOWN, GLUT_KEY_HOME, GLUT_KEY_END, GLUT_KEY_INSERT
+*/
+void iSpecialKeyboard(unsigned char key)
+{
+
+	if (key == GLUT_KEY_END)
+	{
+		exit(0);
+	}
+	//place your codes for other keys here
+}
+
+
+int main()
+{
+	srand(time(NULL));
+	attack_list();
+	iInitialize(960, 540, "pokemon");
+	return 0;
+}

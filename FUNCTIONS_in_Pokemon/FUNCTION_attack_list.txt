@@ -1,0 +1,86 @@
+void attack_list() {
+	/*Ember*/
+	strcpy(moves[0].attk_name, "Ember");
+	moves[0].power = 40;
+	moves[0].type_identifier = 2;
+	
+	/*Flamethrower*/
+	strcpy(moves[1].attk_name, "Flamethrower");
+	moves[1].power = 80;
+	moves[1].type_identifier = 2;
+	
+	/*Fire Blast*/
+	strcpy(moves[2].attk_name, "Fire Blast");
+	moves[2].power = 110;
+	moves[2].type_identifier = 2;
+	
+	/*Razor Leaf*/
+	strcpy(moves[3].attk_name, "Razor Leaf");
+	moves[3].power = 40;
+	moves[3].type_identifier = 1;
+	
+	/*Seed Bomb*/
+	strcpy(moves[4].attk_name, "Seed Bomb");
+	moves[4].power = 80;
+	moves[4].type_identifier = 1;
+	
+	/*Solar Beam*/
+	strcpy(moves[5].attk_name, "Solar Beam");
+	moves[5].power = 110;
+	moves[5].type_identifier = 1;
+	
+	/*Water Gun*/
+	strcpy(moves[6].attk_name, "Water Gun");
+	moves[6].power = 40;
+	moves[6].type_identifier = 3;
+	
+	/*Water Pulse*/
+	strcpy(moves[7].attk_name, "Water Pulse");
+	moves[7].power = 80;
+	moves[7].type_identifier = 3;
+	
+	/*Hydro Pump*/
+	strcpy(moves[8].attk_name, "Hydro Pump");
+	moves[8].power = 110;
+	moves[8].type_identifier = 3;
+	
+	/*Tackle*/
+	strcpy(moves[9].attk_name, "Tackle");
+	moves[9].power = 40;
+	moves[3].type_identifier = 7;
+	
+	/*Quick Attack*/
+	strcpy(moves[10].attk_name, "Quick Attack");
+	moves[10].power = 60;
+	moves[10].type_identifier = 7;
+
+	/*Thundershock*/
+	strcpy(moves[11].attk_name, "Thundershock");
+	moves[11].power = 50;
+	moves[11].type_identifier = 6;
+	
+	/*Thunderbolt*/
+	strcpy(moves[12].attk_name, "Thunderbolt");
+	moves[12].power = 80;
+	moves[12].type_identifier = 6;
+
+	/*Carate Chop*/
+	strcpy(moves[13].attk_name, "Carate Chop");
+	moves[13].power = 50;
+	moves[13].type_identifier = 5;
+
+	/*Cross Chop*/
+	strcpy(moves[14].attk_name, "Cross Chop");
+	moves[14].power = 80;
+	moves[14].type_identifier = 5;
+
+	/*Gust*/
+	strcpy(moves[15].attk_name, "Gust");
+	moves[15].power = 40;
+	moves[15].type_identifier = 4;
+
+	/*Wing Attack*/
+	strcpy(moves[16].attk_name, "Wing Attack");
+	moves[16].power = 70;
+	moves[16].type_identifier = 4;
+}

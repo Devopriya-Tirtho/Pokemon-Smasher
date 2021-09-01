@@ -1,0 +1,80 @@
+	/*if (points < 0)
+	{
+		iClear();
+		iPauseTimer(t);
+		iPauseTimer(t2);
+		iPauseTimer(t3);
+		iPauseTimer(t4);
+		//game over
+	}
+	_itoa(points, score, 10);
+	if (screen == 1)
+	{
+		screen_1();
+	}
+	if (choose)
+	{
+		choice();
+	}
+	if ((pointerX > 650 && pointerX < 720) && (pointerY > 90 && pointerY < 110))
+	{
+		screen = 1;
+		choose = false;
+		screen_1();
+	}
+
+	if (showTown)
+	{
+		town_map();
+	}
+	if (!notBattle) {
+		battle();
+	}
+	if (damage > enemyPkmn.health)
+		//notBattle = true;
+	{
+		notBattle = true;
+		iPauseTimer(t3);
+		enem[removePokemon].y = 9000;
+		iResumeTimer(t);
+		damage = 0;
+		enemyDamage = 0;
+		eMoveNumber = 0;
+		x = 0;
+		points += 1000;
+	}
+	if (enemyDamage > myPkmn_1.health) {
+		notBattle = true;
+		iPauseTimer(t3);
+		iResumeTimer(t);
+		enem[removePokemon].y = 9000;
+		damage = 0;
+		enemyDamage = 0;
+		eMoveNumber = 0;
+		x = 0;
+		points -= 500;
+		printf("%lf", points);
+	}
+	displayMove(selectedMove);
+	if (!notBattle)
+	{
+		//iResumeTimer(t4);
+		enemyDisplayMove(enememyMove);
+	}
+	if (points > 5000) {
+		myPkmn_1.level = 2;
+		myPkmn_1.health = myPkmn_1.getHealth();
+	}
+	if (points > 10000) {
+		myPkmn_1.level = 3;
+		myPkmn_1.health = myPkmn_1.getHealth();
+	}
+	/*if (points < 0)
+	{
+		iClear();
+		iPauseTimer(t);
+		iPauseTimer(t2);
+		iPauseTimer(t3);
+		iPauseTimer(t4);
+		//game over
+	}*/

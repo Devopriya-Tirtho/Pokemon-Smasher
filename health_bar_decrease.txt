@@ -1,0 +1,31 @@
+double x = 100, t, a=70;
+void iDraw()
+{
+	//place your drawing codes here	
+	iClear();
+
+	iSetColor(0, 168, 243);
+	iFilledRectangle(50, 100, x, 20);
+	
+}
+void shorten()
+{
+	x -= 5;
+	if (x < a)
+		iPauseTimer(t);
+
+}
+
+
+void iKeyboard(unsigned char key)
+{
+	if (key == 'p')
+	{
+		//do something with 'q'
+		a -= 20;
+		if (a < x)
+			iResumeTimer(t);
+	}
+
+	//place your codes for other keys here
+}

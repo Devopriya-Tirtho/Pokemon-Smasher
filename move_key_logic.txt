@@ -1,0 +1,16 @@
+	if (id == 1)
+	{
+		if (key == 'a')
+			printf("water gun");
+	}
+	if (id == 2)
+	{
+		if (key == 'a')
+			printf("razor leaf");
+	}
+	if(id==3)
+	{
+		if (key == 'a')
+			printf("Flamethrower");
+	
+	}

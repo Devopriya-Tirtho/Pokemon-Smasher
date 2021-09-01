@@ -1,0 +1,5 @@
+Nirzhor 17500
+rampage 17500
+apple 11000
+ball 8000
+cat 7000

@@ -1,0 +1,18 @@
+void iKeyboard(unsigned char key)
+{
+	if (key == 'p')
+	{
+		//do something with 'q'
+		struct attack atk;
+		double health=enemyPkmn.health;
+		myPkmn_1.level = 2;
+		enemyPkmn.level = 1;
+		atk = myPkmn_1.move[2];
+		health -= damage_calculation(myPkmn_1, enemyPkmn, atk);
+		printf("%s used %s!!\n", myPkmn_1.pokemon_name, atk.attk_name);
+		printf("%lf", health);
+		
+	}
+
+	//place your codes for other keys here
+}
